@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BBC News Top Stories</title>
+</head>
+<body>
+	<h1>BBC News Top Stories</h1>
+	{% for article in articles %}
+		<div>
+			<h2>{{ articles.title }}</h2>
+			<p>{{ articles.summary }}</p>
+			<img src="{{ articles.image_url }}">
+			<p><em>Source: {{ articles.source }}</em></p>
+			<hr>
+		</div>
+	{% empty %}
+		<p>No news available.</p>
+	{% endfor %}
+	
+</body>
+</html>
